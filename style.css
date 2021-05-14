@@ -1,0 +1,345 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+html {
+	scroll-behavior: smooth;
+}
+@font-face {
+	font-family: montserrat;
+	src: url(./font-families/montserrat.ttf);
+}
+@font-face {
+	font-family: karla;
+	src: url(./font-families/karla.ttf);
+}
+@font-face {
+	font-family: karla-italic;
+	src: url(./font-families/karla-italic.ttf);
+}
+/* NavBar */
+
+.header {
+	position: fixed;
+	top: 0;
+	background: white;
+	font-family: montserrat;
+	width: 100%;
+	height: 7.5vh;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	font-weight: 600;
+	letter-spacing: 1px;
+	z-index: 300;
+}
+.navbar {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.navbar > ul {
+	display: flex;
+	list-style: none;
+	color: black;
+}
+.navbar ul li {
+	padding: 20px;
+}
+.navbar ul li a {
+	text-decoration: none;
+	color: black;
+}
+.navbar button {
+	margin-left: 30px;
+	background: #ea686c;
+	color: white;
+	width: 120px;
+	height: 32px;
+	border: none;
+	border-radius: 5px;
+	font-weight: bolder;
+	outline: none;
+	cursor: pointer;
+}
+
+/* Welcome Section */
+
+.welcome {
+	margin-top: 7.5vh;
+	height: 80vh;
+}
+.welcome > img {
+	width: 100vw;
+	object-fit: cover;
+}
+.joining-button {
+	position: absolute;
+	top: 30vh;
+	left: 3.5vw;
+	background: #556272;
+	border: none;
+	width: 117px;
+	height: 42px;
+	border-radius: 5px;
+	color: white;
+}
+.moreInfo {
+	position: absolute;
+	top: 50vh;
+	left: 33vw;
+	font-family: montserrat;
+	text-align: center;
+	background: #556272;
+	padding: 20px;
+	color: white;
+	border-radius: 5px;
+}
+.moreInfo > * {
+	padding: 6px;
+}
+.moreInfo > p {
+	padding-top: 10px;
+	color: #c7c7c7;
+}
+
+/* About Us Section */
+
+.about-us {
+	height: 100%;
+	width: 100vw;
+	padding: 20px;
+	margin-top: -50px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	text-align: center;
+}
+.about-us > h1 {
+	color: #556272;
+	font-size: 36px;
+	font-family: montserrat;
+}
+.about-us > p {
+	padding: 30px;
+	width: 95vh;
+	color: #868484;
+	line-height: 25px;
+	font-family: karla;
+}
+
+/* Testimonial */
+
+.testimonial {
+	position: relative;
+	margin-top: 10vh;
+	width: 100vw;
+	height: 30vh;
+	background-color: #47cdc6;
+}
+.testimon-bg {
+	height: 30vh;
+	width: 100vw;
+	object-fit: cover;
+	overflow: hidden;
+}
+.testimon-text {
+	position: absolute;
+	top: 30%;
+	height: 12vh;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	align-content: center;
+	padding: 10px;
+	width: 100vw;
+}
+.commas {
+	display: flex;
+	justify-self: end;
+	align-self: flex-start;
+	padding: 15px;
+}
+.commas img {
+	display: flex;
+	align-items: center;
+	width: 1.5vw;
+	height: 3vh;
+	/* object-fit: cover; */
+	z-index: 30;
+}
+.real-text {
+	text-align: center;
+	grid-column: 2/4;
+	color: white;
+	font-size: 1.2rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	height: 12vh;
+}
+.testimon-general-text {
+	font-family: karla;
+}
+.testimon-person {
+	font-family: karla-italic;
+	font-size: 1rem;
+}
+
+/* Modes of Classes */
+
+.classes-modes {
+	width: 100vw;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+.upper-text {
+	text-align: center;
+	margin: 20px;
+	padding: 40px;
+}
+.upper-text h1 {
+	font-family: montserrat;
+	margin-bottom: 30px;
+	color: #3a3a3a;
+}
+.upper-text p {
+	font-family: karla;
+	width: 70vw;
+	font-size: 1.2rem;
+	color: #9e9e9e;
+}
+.general-imgs {
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	width: 100vw;
+	margin: 20px;
+}
+.general-img {
+	position: relative;
+	object-fit: cover;
+}
+.mode-overlay {
+	position: absolute;
+	top: 90%;
+	font-family: karla;
+	color: white;
+	font-weight: bold;
+	font-size: 1.2rem;
+	margin-left: 10px;
+	z-index: 10;
+}
+.general-img::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(to top, black, rgba(0, 0, 0, 0));
+	opacity: 50%;
+	border-radius: 10px;
+}
+
+/*  */
+/* Core Program Grid of Images */
+
+.program-grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr;
+	grid-gap: 5px;
+}
+.program-img {
+	position: relative;
+}
+.program-img::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 99%;
+	background: linear-gradient(to top, black, rgba(0, 0, 0, 0));
+	opacity: 50%;
+	border-radius: 5px;
+}
+.program-img img {
+	width: 20vw;
+	height: 20vh;
+	object-fit: cover;
+	border-radius: 5px;
+}
+.first-program-img {
+	width: 40vw;
+	height: 41vh;
+	object-fit: cover;
+	border-radius: 5px;
+}
+
+/* the first image of the whole images grid */
+.grid-img1 {
+	position: relative;
+	grid-column: 1/3;
+	grid-row: 1/3;
+}
+.grid-img1::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 99%;
+	height: 99%;
+	background: linear-gradient(to top, black, rgba(0, 0, 0, 0));
+	opacity: 50%;
+	border-radius: 5px;
+}
+.overlay-img1 {
+	position: absolute;
+	top: 91%;
+	font-family: karla;
+	color: white;
+	display: flex;
+	justify-content: space-between;
+	width: 95%;
+	font-weight: bold;
+	font-size: 1.5rem;
+	margin-left: 8px;
+	z-index: 10;
+}
+/* the css and grid positioning of remaining images */
+.grid-img2 {
+	grid-column: 3/4;
+	grid-row: 1/2;
+}
+.grid-img3 {
+	grid-column: 3/4;
+	grid-row: 2/3;
+}
+.grid-img4 {
+	grid-column: 4/5;
+	grid-row: 1/2;
+}
+.grid-img5 {
+	grid-column: 4/5;
+	grid-row: 2/3;
+}
+.overlay-text {
+	position: absolute;
+	top: 85%;
+	font-family: karla;
+	color: white;
+	display: flex;
+	justify-content: space-between;
+	width: 95%;
+	font-weight: bold;
+	font-size: 1rem;
+	margin-left: 8px;
+	z-index: 10;
+}
